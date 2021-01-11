@@ -1,19 +1,25 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-
-class Todo extends StatelessWidget {
+import 'package:flutter/material.dart';
+                                                                                                  
+class Body  extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     Size size = MediaQuery.of(context).size; //Total Width and He ight of Screen
-    return Background(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
+    return Scaffold(
+      // appBar: AppBar(
+      //   title:Text('DocApp Registration'),
+      // ),//appbar
+     body: SingleChildScrollView(
+      child:Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
               height: size.height,
               width: size.width,
-              color: secondAccentColor,
+              color:Colors.blueAccent,
+              //color: accentColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,6 +32,9 @@ class Todo extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+
+
+
                   SizedBox(height: size.height * 0.1),
                   Row(
                     children: <Widget>[
@@ -35,65 +44,82 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/1.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
+
+
+
+
                       SizedBox(width: size.width * 0.05),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(60),
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/2.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
+
+
+
                       SizedBox(width: size.width * 0.05),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(60),
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/3.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
                     ],
                   ),
+
+
+
+
                   SizedBox(height: size.height * 0.01),
                   Row(
                     children: <Widget>[
-                      SizedBox(width: size.width * 0.15),
+                      SizedBox(width: size.width * 0.12),
                       Text(
                         "Allergist",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+
+
+
                       SizedBox(width: size.width * 0.12),
                       Text(
                         "Anesthesiologist",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -102,7 +128,7 @@ class Todo extends StatelessWidget {
                         "Cardiologist",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -117,12 +143,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/4.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -132,12 +159,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/5.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -147,12 +175,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 17, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/6.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -175,7 +204,7 @@ class Todo extends StatelessWidget {
                         "Gynecologist",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -184,7 +213,7 @@ class Todo extends StatelessWidget {
                         "Nephrologist",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -199,12 +228,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/7-2.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.005,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -214,12 +244,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/8.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -229,12 +260,13 @@ class Todo extends StatelessWidget {
                         child: FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 17, horizontal: 15),
-                          color: myPrimaryColor,
+                          // color: myPrimaryColor,
                           onPressed: () async {},
                           child: SvgPicture.asset(
                             "assets/icons/9.svg",
                             height: size.height * 0.08,
                             width: size.width * 0.08,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -252,21 +284,21 @@ class Todo extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: size.width * 0.11),
+                      SizedBox(width: size.width * 0.10),
                       Text(
                         "Orthopedic",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: size.width * 0.13),
+                      SizedBox(width: size.width * 0.11),
                       Text(
                         "Pediatrician",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
