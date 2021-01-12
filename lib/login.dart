@@ -1,13 +1,11 @@
-// import 'dart:io';
 
-// import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-// import 'dart:async';
 import 'dart:convert';
-//import 'dart:convert';
 import 'package:http/http.dart' as http;
-// import 'package:myflutter_app/logres.dart';
-import 'success.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'afterlogin.dart';
+
+
 
 
 class Login extends StatefulWidget {
@@ -21,7 +19,14 @@ class LoginState extends State<Login> {
 
   String _email;
   String _password;
-  
+
+  FToast fToast;
+
+  void initState() {
+    super.initState();
+    fToast = FToast();
+    fToast.init(context);
+}
 
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -66,7 +71,6 @@ class LoginState extends State<Login> {
   }
 
 
-    
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,9 +134,19 @@ class LoginState extends State<Login> {
                     Navigator.push(
                     context,
                     MaterialPageRoute(
-    	              builder: (context) => Body()),
+    	              builder: (context) => Afterlogin()),
                      );
-                  }else{ // wala naka login
+                  }else{ // wala naka
+                  Fluttertoast.showToast(
+                    msg: "Invalid Username or password",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0
+    );
+                    
                     
                     print(responseDecode['data']);
                    
@@ -140,53 +154,6 @@ class LoginState extends State<Login> {
                      }
 
 
-                    
-                    // set up the button
-                  // Widget okButton = FlatButton(
-                  // child: Text("OK"),
-                  // onPressed: () { 
-                  //    Navigator.push(context,
-                  //    MaterialPageRoute(builder: (context)=>exit())
-                      
-                  //     );
-                  //     },
-                  // );
-
-                  // Widget exit = FlatButton(
-                  // child: Text("exit"),
-                  // onPressed: null;
-
-                  // // set up the AlertDialog
-                  // AlertDialog alert = AlertDialog(
-                  // title: Text("Opsss"),
-                  // content: Text("Invalid usename or password"),
-                  // actions: [
-                  // okButton,
-                  // exit
-                  // ],
-                  // );
-
-                  // // show the dialog
-                  // showDialog(
-                  //     context: context,
-                  //   builder: (BuildContext context) {
-                  //    return alert;
-                  //    },
-                  //   );
-                    
-                  // }
-                  // if (response.statusCode == 200) {
-                      
-                  //   // If the server did return a 200 OK response,
-                  //   // then parse the JSON.
-                  //   print(response.body);
-                    
-                  //   print(data);
-                   
-                  // } else {
-                  //   // If the server did not return a 200 OK response,
-                  //   // then throw an exception.
-                  //   throw Exception('Failed to load album');
                  
                   
                 } 
@@ -212,3 +179,5 @@ class LoginState extends State<Login> {
 
 
 }
+
+

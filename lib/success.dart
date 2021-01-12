@@ -8,9 +8,7 @@ class Body  extends StatelessWidget {
   Widget build(BuildContext context){
     Size size = MediaQuery.of(context).size; //Total Width and He ight of Screen
     return Scaffold(
-      // appBar: AppBar(
-      //   title:Text('DocApp Registration'),
-      // ),//appbar
+    
      body: SingleChildScrollView(
       child:Column(
       mainAxisSize: MainAxisSize.min,
@@ -25,7 +23,7 @@ class Body  extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Find Doctors Easily",
+                    "Types of Doctor",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 36,

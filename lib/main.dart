@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'registration.dart';
+import 'patientregistration.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner:false,
       title: 'Flutter Demo',
       theme: ThemeData(
       
@@ -47,9 +49,9 @@ class MyHomePage extends StatelessWidget {
               shape: StadiumBorder(),
               elevation: 20,
               onPressed: (){
-                  Navigator.push( //hey 
+                  Navigator.push(
                       context,
-                      MaterialPageRoute(builder:(context)=> Registration())
+                      MaterialPageRoute(builder:(context)=> PatientRegistration())
                   );
               },    
               padding: EdgeInsets.symmetric(vertical: 25.0,horizontal:30.0),

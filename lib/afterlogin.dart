@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:myflutter_app/login.dart';
-import 'package:myflutter_app/patientregistration.dart';
-
+import 'success.dart';
+import 'todo.dart';
                                                                                                   
-class Logres extends StatelessWidget {
+class Afterlogin extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title:Text("welcome"),
+       
       ),//appbar
      body: Center(
       child:Column(
       mainAxisSize: MainAxisSize.min,
       children: [
+
         SizedBox(
           width:180,
           height:85,
@@ -22,19 +22,19 @@ class Logres extends StatelessWidget {
           onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context)=>Login())
+                MaterialPageRoute(builder:(context)=>Body())
                 );
           
         },
         color: Colors.blue[700],
         splashColor: Colors.purple[700],
         shape:RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
-        child:Text('Login', style:TextStyle(color: Colors.white, fontSize: 15),
+        child:Text('Doctors', style:TextStyle(color: Colors.white, fontSize: 15),
            ),//text
        ),//raisebutton
        ),//SizedBOx
        SizedBox(
-        height:8,
+        height:16,
        ),
         
       
@@ -46,22 +46,19 @@ class Logres extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder:(context)=>PatientRegistration())
+              MaterialPageRoute(builder:(context)=>Todo())
               );
           
         },
         color: Colors.blue[700],
         splashColor: Colors.purple[700],
         shape:RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
-        child:Text('Register', style:TextStyle(color: Colors.white, fontSize: 15),
+        child:Text('To do', style:TextStyle(color: Colors.white, fontSize: 15),
            ),//text
        ),//raisebutton
        ),//SizedBOx
         SizedBox(
-        height:8,
-       ),
-        
-     
+        height:16,),
       ],//children
      )),//column, center
       

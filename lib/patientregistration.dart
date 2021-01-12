@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'dart:async';
-//import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:myflutter_app/login.dart';
 
@@ -16,11 +14,10 @@ class PatientRegistrationState extends State<PatientRegistration> {
   String _name;
   String _email;
   String _password;
-  // String _phoneNumber;
-  // String _address;
 
 
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   Widget _buildName() {
     return TextFormField(
@@ -80,39 +77,6 @@ class PatientRegistrationState extends State<PatientRegistration> {
     );
   }
 
-  //   Widget _buildPhoneNumber() {
-  //   return TextFormField(
-  //     decoration: InputDecoration(labelText: 'Phone Number'),
-  //     keyboardType: TextInputType.phone,
-  //     validator: (String value) {
-  //       if (value.isEmpty){
-  //         return 'Phone NUmber is Required';
-  //       }
-  //       return null;
-  //     },
-  //     onSaved: (String value) {
-  //       _phoneNumber = value;
-  //     },
-  //   );
-  // }
-
-  //   Widget _buildAddress() {
-  //   return TextFormField(
-  //     decoration: InputDecoration(labelText: 'Address'),
-  //     keyboardType: TextInputType.streetAddress,
-  //     validator: (String value) {
-  //       if (value.isEmpty){
-  //         return 'Address is Required';
-  //       }
-  //       return null;
-  //     },
-  //     onSaved: (String value) {
-  //       _address = value;
-  //     },
-  //   );
-  // }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -159,8 +123,6 @@ class PatientRegistrationState extends State<PatientRegistration> {
                   "name":_name, 
                   "email":_email,
                   "password":_password, 
-                  // "phone":_phoneNumber, 
-                  // "address":_address
                 };
                 
 
@@ -171,16 +133,10 @@ class PatientRegistrationState extends State<PatientRegistration> {
                   if (response.statusCode == 200) {
                     print("sakto");
                     print(data);
-                      
-                    // If the server did return a 200 OK response,
-                    // then parse the JSON.
                     print(response.body);
                   } else {
-                    // If the server did not return a 200 OK response,
-                    // then throw an exception.
                     print("sayop");
                     throw Exception('Failed to load album');
-                    
                   }
                   
                 } 
@@ -190,11 +146,31 @@ class PatientRegistrationState extends State<PatientRegistration> {
 
               },
             ),
+            SizedBox(width:180,
+                     height:5),
+          RaisedButton(
+              color: Colors.blue[700],
+                  shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.blue)),
 
+              child: Text(
+                'Login',
+              
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16),),
+              onPressed: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>Login()));
 
+              },)
 
+          
             
           ],
+
+          
 
 
 
