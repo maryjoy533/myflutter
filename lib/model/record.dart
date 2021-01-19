@@ -1,16 +1,15 @@
+
+import 'dart:async';
 import 'dart:convert';
 
-class Record {
-  String desciption;
+
+import 'package:http/http.dart' as http;
 
 
-  Record({this.desciption});
 
-  factory Record.responseJson(final json){
-    return Record(
-      desciption:json["desciption"]
-    );
+Future<List> getData() async{
+
+    String myUrl = "http://192.168.254.107/mydocapp/public/api/todos/";
+    http.Response response = await http.get(myUrl);
+    return json.decode(response.body);
   }
-
-}
-
