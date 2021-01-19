@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'success.dart';
-import 'todo.dart';
+import 'patient_todo.dart';
                                                                                                   
 class Afterlogin extends StatelessWidget {
   @override
