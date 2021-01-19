@@ -27,6 +27,14 @@ Route::group (['middleware' => 'api' , 'prefix' => '/products'], function()
     Route::delete('/delete/{id}', 'ProductController@delete');
 
 });
+Route::group (['middleware' => 'api' , 'prefix' => '/todos'], function(){
+    Route::get('/','TodoContoller@index');
+    Route::post('/create_todo', 'TodoContoller@create_todo');
+    Route::put('/update_todo/{id}', 'TodoContoller@update_todo');
+    Route::delete('/delete_todo/{id}', 'TodoContoller@delete_todo');
+
+
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
