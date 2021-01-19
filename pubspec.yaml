@@ -27,7 +27,7 @@ dependencies:
 
  
   flutter_svg: ^0.19.1
-  
+  fluttertoast: ^7.1.6  
   
   # sqflite: any
   # path_provider: any

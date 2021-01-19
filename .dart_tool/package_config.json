@@ -110,6 +110,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "fluttertoast",
+      "rootUri": "file:///C:/Users/baili/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-7.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "google_fonts",
       "rootUri": "file:///C:/Users/baili/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-1.1.1",
       "packageUri": "lib/",
@@ -356,7 +362,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-01-11T01:13:24.943291Z",
+  "generated": "2021-01-19T01:45:13.304531Z",
   "generator": "pub",
   "generatorVersion": "2.10.2"
 }
